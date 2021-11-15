@@ -1,14 +1,11 @@
 {
     "extends": "stylelint-config-standard",
     "rules": {
-        "indentation": "tab",
+        "indentation": 4,
         "string-quotes": "single",
         "no-duplicate-selectors": true,
         "color-hex-case": "lower",
         "color-named": "never",
-        "selector-no-qualifying-type": true,
-        "selector-no-id": true,
-        "selector-no-attribute": true,
         "selector-combinator-space-after": "always",
         "selector-attribute-quotes": "always",
         "selector-attribute-operator-space-before": "always",
@@ -31,7 +28,6 @@
         "selector-pseudo-element-colon-notation": "single",
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-no-vendor-prefix": true,
-        "selector-no-type": true,
         "media-feature-range-operator-space-before": "always",
         "media-feature-range-operator-space-after": "always",
         "media-feature-parentheses-space-inside": "never",
