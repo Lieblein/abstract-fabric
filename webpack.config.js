@@ -5,23 +5,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
-
-
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
-
-
 
 const config = {
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: isProduction ? '' : '/',
+        filename: isProduction ? `[chunkhash].[name].js` : `[name].js`
     },
     devServer: {
         open: true,
         host: 'localhost',
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
+            inject: 'body',
             template: 'index.html',
         }),
 
@@ -63,10 +63,7 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
-        config.plugins.push(new MiniCssExtractPlugin());
-        
-        
+        config.plugins.push(new MiniCssExtractPlugin({ filename: '[hash].[name].css' }));
     } else {
         config.mode = 'development';
     }
