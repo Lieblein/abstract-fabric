@@ -21,7 +21,7 @@ export interface IHireFireAction extends IAction<null> {
     type: typeof HIRE | typeof FIRE;
 }
 
-interface IDepartmentDetail {
+export interface IDepartmentDetail {
     department: number;
     comment: string;
 }
@@ -30,7 +30,7 @@ export interface IDepartmentAction extends IAction<IDepartmentDetail> {
     type: typeof DEPARTMENT_CHANGE;
 }
 
-interface ILevelDetail {
+export interface ILevelDetail {
     level: number;
     promoted: string;
     comment: string;
