@@ -82,7 +82,7 @@ function getActions() {
         promoted: { from: promoted },
         level,
         comment,
-    }, index) => ({
+    }, index, levelAchievements) => ({
         id,
         type: LEVEL_CHANGE,
         date,

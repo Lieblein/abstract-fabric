@@ -9,6 +9,7 @@ import { FABRIC, SWITCH, CLONE } from '../../constants/routes';
 import Layout from '../Layout';
 import Switch from '../Switch';
 import Clones from '../Clones';
+import Fabric from '../Fabric';
 import './app.pcss';
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
                 <Routes>
                     <Route path={ SWITCH } element={ <Switch /> } />
                     <Route path={ CLONE } element={ <Clones /> } />
-                    <Route path={ FABRIC } element={ <>1</> } />
+                    <Route path={ FABRIC } element={ <Fabric /> } />
                     <Route
                         path="*"
                         element={
