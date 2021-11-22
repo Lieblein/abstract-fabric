@@ -6,16 +6,16 @@ import './layout.pcss';
 
 const links = [
     {
-        title: 'Фабрика',
-        to: FABRIC,
-    },
-    {
         title: 'Switch',
         to: SWITCH,
     },
     {
         title: 'Атака клонов',
         to: CLONE,
+    },
+    {
+        title: 'Фабрика',
+        to: FABRIC,
     },
 ];
 

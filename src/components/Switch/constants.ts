@@ -1,6 +1,6 @@
 import sortBy from 'lodash/sortBy';
 
-import { deleteLevel, deleteDepartment, unfire } from '../../actions';
+import { deleteLevelAchievement, deleteDepartmentJoin, unfire } from '../../actions';
 import { departmentJoins, levelAchievements } from '../../constants/data';
 import {
     HIRE,
@@ -20,8 +20,8 @@ const levelIcon = require('../icons/star.svg') as ISvgFile;
 
 export const deleteCallbackMap = new Map([
     [FIRE, unfire],
-    [DEPARTMENT_CHANGE, deleteDepartment],
-    [LEVEL_CHANGE, deleteLevel],
+    [DEPARTMENT_CHANGE, deleteDepartmentJoin],
+    [LEVEL_CHANGE, deleteLevelAchievement],
 ]);
 
 export const iconMap = new Map([

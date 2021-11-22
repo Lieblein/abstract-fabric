@@ -8,6 +8,7 @@ import {
 import { FABRIC, SWITCH, CLONE } from '../../constants/routes';
 import Layout from '../Layout';
 import Switch from '../Switch';
+import Clones from '../Clones';
 import './app.pcss';
 
 export default function App() {
@@ -15,9 +16,9 @@ export default function App() {
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route path={ FABRIC } element={ <>1</> } />
                     <Route path={ SWITCH } element={ <Switch /> } />
-                    <Route path={ CLONE } element={ <>3</> } />
+                    <Route path={ CLONE } element={ <Clones /> } />
+                    <Route path={ FABRIC } element={ <>1</> } />
                     <Route
                         path="*"
                         element={
